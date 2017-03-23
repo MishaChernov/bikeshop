@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>The bike shop</title>
+  <meta charset="utf-8">
+  <link href="css/normalize.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__logo">
+        <img class="header__picture" src="img/logo.png" width="160" height="50" alt="logo the bike shop">
+      </div>
+      <nav class="main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item  main-menu__item--active">
+            <a href="#" class="main-menu__link  main-menu__link--active">Bicycles</a>
+            <div class="main-menu__sub-menu">
+              <a href="#" class="main-menu__link  menu-popup__link--active  main-menu__link--black">Fixed / single speed</a>
+              <a href="#" class="main-menu__link  main-menu__link--black">City bikes</a>
+              <a href="#" class="main-menu__link  main-menu__link--black">Premium series</a>
+            </div>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">Parts</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">Accessories</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">Extras</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__basket">
+        <a href="#">Корзина</a>
+      </div>
+      <h1 class="header__title">Handmade bicycle</h1>
+      <p class="header__text">You create the journey, we supply the parts.</p>
+      <a class="header__btn-shop  btn">Shop bikes</a>
+      <button type="button" class="header__btn  header__btn--left">Левый переключатель</button>
+      <button type="button" class="header__btn  header__btn--right">Правый переключатель</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="categories">
+      <div class="wrapper">
+        <h2 class="categories__title">Categories</h2>
+        <div class="category">
+          <h3 class="category-title">Fixed / single speed</h3>
+          <p class="category-text">Are You ready for the 27.5 Revolution?</p>
+        </div>
+        <div class="category">
+          <h3 class="category-title">Premium series</h3>
+          <p class="category-text">Exclusive  Bike Components</p>
+          <a class="btn category-btn" href="#">Go to store</a>
+        </div>
+        <div class="category">
+          <h3 class="category-title">City bikes</h3>
+          <p class="category-text">Street Playground</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular">
+      <div class="wrapper">
+        <h2 class="popular__title">Popular bikes</h2>
+        <div class="product">
+          <img class="product__picture" src="img/bikes-item-1.jpg" width="490" height="391" alt="Fixed Gear">
+          <div class="product__info">
+            <h3 class="product__name">Fixed gear</h3>
+            <span class="product__price">$249.00</span>
+          </div>
+          <form action="#" method="get" class="product__form">
+            <select class="product__select-list">
+              <option class="product__select">Option</option>
+              <option class="product__select">Option 2</option>
+            </select>
+            <button class="product__submit" type="submit">Buy</button>
+          </form>
+        </div>
+        <div class="product">
+          <img class="product__picture" src="img/bikes-item-2.jpg" width="490" height="391" alt="Big boy ultra">
+          <div class="product__info">
+            <h3 class="product__name">Big boy ultra</h3>
+            <span class="product__price">$249.00</span>
+          </div>
+          <form action="#" method="get" class="product__form">
+            <select class="product__select-list">
+              <option class="product__select">Option</option>
+              <option class="product__select">Option 2</option>
+            </select>
+            <button class="product__submit" type="submit">Buy</button>
+          </form>
+        </div>
+        <div class="product">
+          <img class="product__picture" src="img/bikes-item-3.jpg" width="490" height="391" alt="Sanchaez">
+          <div class="product__info">
+            <h3 class="product__name">Sanchaez</h3>
+            <span class="product__price">$249.00</span>
+          </div>
+          <form action="#" method="get" class="product__form">
+            <select class="product__select-list">
+              <option class="product__select">Option</option>
+              <option class="product__select">Option 2</option>
+            </select>
+            <button class="product__submit" type="submit">Buy</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback">
+      <div class="wrapper">
+        <h2 class="feedback__title">About us</h2>
+        <p class="feedback__text">Please contact us for all inquiries and purchase options.</p>
+        <form class="feedback__form" action="#" method="post">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="text" name="surname" placeholder="Surname" required>
+          <input type="email" name="email" placeholder="User@domain.com" required>
+          <textarea name="message" rows="5">Message</textarea>
+          <button class="feedback__btn" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="wrapper">
+      <div class="footer__logo">
+        <img class="footer__picture" src="img/logo.png" width="160" height="50" alt="logo the bike shop">
+      </div>
+      <nav class="main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item  main-menu__item--active">
+            <a href="#" class="main-menu__link  main-menu__link--active  main-menu__link--black">Bicycles</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link  main-menu__link--black">Parts</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link  main-menu__link--black">Accessories</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link  main-menu__link--black">Extras</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
