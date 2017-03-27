@@ -10,7 +10,6 @@ body {
 .btn {
   padding: 15px 20px;
   border-radius: 8px;
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   color: #fcff19;
@@ -28,17 +27,8 @@ body {
 
 .clearfix::after {
   content: "";
-  display: block;
+  display: table;
   clear: both;
-}
-
-.wrapper {
-  position: relative;
-  max-width: 1874px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 23px;
-  text-align: center;
 }
 
 .container {
@@ -47,10 +37,16 @@ body {
 
         /*header*/
 .header {
-  display: block;
-  padding-top: 20px;
-  height: 960px;
-  background: url("../img/bg-header-slide-1.jpg") no-repeat center;
+  background: #7d96e3 url("../img/bg-header-slide-1.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.header__wrapper {
+  position: relative;
+
+  margin: 0 auto;
+  padding: 20px 23px 400px 23px;
+  text-align: center;
 }
 
 .header__logo {
@@ -69,7 +65,9 @@ body {
 
 .main-menu__item {
   position: relative;
+
   display: inline-block;
+  vertical-align: middle;
   padding: 0 15px;
   list-style: none;
 }
@@ -109,7 +107,6 @@ body {
   left: 0;
 
   display: none;
-
   padding: 0;
   padding-top: 10px;
   padding-left: 15px;
@@ -124,7 +121,6 @@ body {
 
 .main-menu__sub-menu .main-menu__link {
   display: block;
-
   width: 100%;
   margin-right: 40px;
 
@@ -134,34 +130,46 @@ body {
 
 .header__basket {
   display: inline-block;
-
-  margin-left: 40px;
   vertical-align: middle;
+  margin-left: 40px;
 
   font-size: 0;
 }
 
 .header__link {
   display: block;
+  width: 29px;
+  height: 29px;
+}
 
-  width: 26px;
-  height: 26px;
+.header__link::before {
+  content: "";
+  display: block;
+  width: 29px;
+  height: 29px;
 
-  background: url("../img/sprite-picture.png") no-repeat -5px -5px;
+  background: url("../img/sprite-picture.png") no-repeat;
+  background-position: -20px -20px;
+}
+
+.header__link:hover {
+  opacity: 0.5;
+}
+
+.header__link:active {
+  transform: scale(1.1);
 }
 
 .header__title {
   margin-top: 320px;
   margin-bottom: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .header__text {
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 28px;
 }
 
@@ -176,35 +184,40 @@ body {
 
 .header__btn {
   position: absolute;
-
   margin: 0 23px;
-  width: 58px;
-  height: 58px;
+  width: 56px;
+  height: 56px;
 
   font-size: 0;
 
   background: url("../img/sprite-picture.png") no-repeat 0 0;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
   opacity: 1;
   outline: none;
-  border: none;
 
   cursor: pointer;
 }
 
 .header__btn:hover {
-  opacity: 0.8;
+  opacity: 0.5;
+}
+
+.header__btn:active {
+  transform: scale(1.1);
 }
 
 .header__btn--left {
   top: 50%;
   left: 0;
-  background-position: -41px -5px;
+  background-position: -6px -75px;
 }
 
 .header__btn--right {
   top: 50%;
   right: 0;
-  background-position: -109px -5px;
+  background-position: -3px -144px;
+  border: 2px solid #535353;
 }
 
 .header__scroll-picture {
@@ -215,7 +228,8 @@ body {
   height: 77px;
 
   font-size: 0;
-  background: url("../img/sprite-picture.png") no-repeat -177px -5px;
+  background: url("../img/sprite-picture.png") no-repeat;
+  background-position: -20px -224px;
   cursor: pointer;
 }
 
@@ -227,6 +241,7 @@ body {
 
   text-align: center;
   background: #eeeeee url("../img/bg-categories.jpg") no-repeat center bottom;
+  background-size: cover;
 }
 
 .catalog__title {
@@ -234,21 +249,20 @@ body {
   padding-bottom: 35px;
   margin: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 28px;
   text-transform: uppercase;
   color: #000000;
 }
 
 .catalog__item {
+  position: relative;
   display: inline-block;
-
+  vertical-align: middle;
   margin-right: 30px;
   margin-top: 35px;
   padding-top: 135px;
   width: 347px;
   height: 153px;
-  vertical-align: middle;
 
   text-align: center;
   font-size: 0;
@@ -261,7 +275,6 @@ body {
 .catalog__name {
   margin: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
   text-transform: uppercase;
   color: #fcff19;
@@ -271,16 +284,17 @@ body {
   margin: 0;
   margin-bottom: 25px;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   color: #ffffff;
 }
 
 .catalog__btn {
+  display: none;
+  margin: 0 auto;
   margin-top: 25px;
-  padding: 10px 15px;
+  padding: 0 15px;
+  width: 90px;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
@@ -290,32 +304,48 @@ body {
   border-radius: 8px;
 }
 
+.catalog__item:hover {
+  box-shadow: -5px 5px 5px rgba(252, 255, 25, 0.5),
+               5px 5px 5px rgba(252, 255, 25, 0.5),
+               -5px -5px 5px rgba(252, 255, 25, 0.5),
+               5px -5px 5px rgba(252, 255, 25, 0.5);
+}
+
+.catalog__item:hover .catalog__btn {
+  display: block;
+}
+
 .catalog__btn:hover {
-  border: 3px solid #000000;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.catalog__item--one {
-  background: url("../img/categories-picture-1.jpg") no-repeat 0 0;
+.catalog__item--order-one {
+  background: #919191 url("../img/categories-picture-1.jpg") no-repeat 0 0;
 }
 
-.catalog__item--two {
-  background: url("../img/categories-picture-2.jpg") no-repeat 0 0;
+.catalog__item--order-two {
+  background: #919191 url("../img/categories-picture-2.jpg") no-repeat 0 0;
 }
 
-.catalog__item--three {
-  background: url("../img/categories-picture-3.jpg") no-repeat 0 0;
+.catalog__item--order-three {
+  background: #919191 url("../img/categories-picture-3.jpg") no-repeat 0 0;
 }
-
         /*popular*/
 .popular {
   padding-bottom: 35px;
+}
+
+.popular__wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 23px;
+  text-align: center;
 }
 
 .popular__title {
   padding: 70px 0;
   margin: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 28px;
   text-transform: uppercase;
   color: #000000;
@@ -323,10 +353,9 @@ body {
 
 .product {
   display: inline-block;
-
+  vertical-align: middle;
   width: 467px;
   margin-right: 100px;
-  vertical-align: middle;
 }
 
 .product:last-of-type {
@@ -335,11 +364,9 @@ body {
 
 .product__info {
   float: left;
-
   width: 200px;
   margin-right: 10px;
   margin-top: -10px;
-  vertical-align: top;
 
   text-align: left;
   font-size: 0;
@@ -348,23 +375,18 @@ body {
 .product__name {
   margin: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
   text-transform: uppercase;
   color: #000000;
 }
 
 .product__price {
-  display: inline-block;
-
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
   color: #000000;
 }
 
 .product__form {
   float: right;
-
   width: 250px;
   text-align: right;
 
@@ -374,9 +396,7 @@ body {
 .product__select-list {
   width: 143px;
   padding: 15px 0 13px 20px;
-  vertical-align: bottom;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   line-height: 30px;
   font-weight: 700;
@@ -405,11 +425,11 @@ body {
   padding-bottom: 80px;
 
   background: #fdfdfd url("../img/bg-feedback.jpg") no-repeat center bottom;
+  background-size: cover;
 }
 
 .feedback__wrapper {
   display: block;
-
   margin: 0 auto;
   max-width: 450px;
 }
@@ -419,7 +439,6 @@ body {
   padding-bottom: 50px;
   margin: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 28px;
   text-transform: uppercase;
   text-align: center;
@@ -430,28 +449,31 @@ body {
   margin: 0;
   margin-bottom: 45px;
 
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   text-align: center;
   color: #000000;
 }
 
+.feedback__label {
+  display: none;
+}
+
+.feedback__item {
+  border: 1px solid #dadada;
+  border-radius: 8px;
+}
+
 .feedback__name,
 .feedback__surname {
   display: inline-block;
-
+  vertical-align: middle;
   padding: 10px 15px;
   padding-right: 0;
   width: 195px;
-  vertical-align: middle;
 
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  color: #808080;
-
-  border: 1px solid #dadada;
-  border-radius: 8px;
 }
 
 .feedback__form input:focus,
@@ -464,8 +486,6 @@ body {
 }
 
 .feedback__email {
-  display: block;
-
   padding: 10px 15px;
   padding-right: 0;
   margin-top: 20px;
@@ -474,15 +494,9 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  color: #808080;
-
-  border: 1px solid #dadada;
-  border-radius: 8px;
 }
 
 .feedback__textarea {
-  display: block;
-
   padding: 18px 15px;
   padding-right: 0;
   margin-top: 20px;
@@ -491,10 +505,6 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  color: #808080;
-
-  border: 1px solid #dadada;
-  border-radius: 8px;
 
   resize: none;
 }
@@ -516,6 +526,16 @@ body {
   cursor: pointer;
 }
 
+.feedback__item:hover {
+  border: 1px solid #fcff19;
+  border-radius: 8px;
+}
+
+.feedback__item:focus {
+  border: 1px solid #fcff19;
+  background-color: #d7d7d7;
+}
+
 .feedback__submit:focus {
   outline: none;
 }
@@ -531,25 +551,33 @@ body {
 
         /*footer*/
 .footer {
-  display: block;
   padding: 15px 0;
 
   background-color: #fcff19;
 }
 
+.footer-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 23px;
+  text-align: center;
+}
+
 .footer__logo {
   display: block;
   float: left;
-
   width: 175px;
   margin-left: 52px;
 }
 
+.footer__picture {
+  transform: scale(0.8);
+  filter: invert(100%);
+}
 
 .menu {
   display: block;
   float: right;
-
   min-width: 380px;
   margin-top: 18px;
   margin-right: 52px;
@@ -562,9 +590,8 @@ body {
 
 .menu__item {
   display: inline-block;
-
-  margin-right: 35px;
   vertical-align: middle;
+  margin-right: 35px;
 
   font-size: 0;
 }
@@ -574,7 +601,6 @@ body {
 }
 
 .menu__link {
-  font-family: "Roboto", Arial, sans-serif;
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
