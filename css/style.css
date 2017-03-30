@@ -275,7 +275,7 @@ body {
   padding-top: 135px;
   padding-bottom: 55px;
   width: 347px;
-  min-height: 153px;
+  min-height: 98px;
 
   text-align: center;
   font-size: 0;
@@ -575,8 +575,9 @@ body {
   background-color: #fcff19;
 }
 
-.footer-wrapper {
+.footer__wrapper {
   position: relative;
+  width: 1874px;
   margin: 0 auto;
   padding: 0 23px;
   text-align: center;
