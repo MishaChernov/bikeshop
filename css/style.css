@@ -577,7 +577,7 @@ body {
 
 .footer__wrapper {
   position: relative;
-  width: 1874px;
+  max-width: 1874px;
   margin: 0 auto;
   padding: 0 23px;
   text-align: center;
